@@ -11,7 +11,7 @@ class V2 extends MX_Controller {
 	{
 		$d['title_head']='Home';
 		$this->load->view('header',$d);
-		$this->load->view('index-page');
+		$this->load->view('index_page');
 		$this->load->view('footer');
 	}
 }
