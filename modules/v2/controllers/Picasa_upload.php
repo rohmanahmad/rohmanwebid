@@ -7,6 +7,7 @@ var $sess_temboo;
 
 	function __construct(){
 		parent::__construct();
+		$this->load->library('session');
 	}
 
 	function set_temboo_session(){
@@ -34,72 +35,101 @@ var $sess_temboo;
 	function get_user($user){
 		$array_users=array(
 				'default'=>array(
-						'username'=>'rohmanwebid@gmail.com',
-						'password'=>'allah is 1'
+						'email_user'=>'rohmanwebid@gmail.com',
+						'album_id'=>'6207586891292931041',
+						'refresh_token'=>'1/o3G_592X5sxpQ5SO8xvuyIJKxn6IO3S_tZC06HyXjOrBactUREZofsF9C7PrpE-j',
+						'client_id'=>'437877361893-v5bgn5lennfolmmogrd0dqpv1nfp1qhs.apps.googleusercontent.com',
+						'client_secret'=>'rLrd6OE3guBTyx3NwhPenKuG',
 					)
 			);
 
 		return $array_users[$user];
 	}
 
+	function upload_photo_to_tmp($tmpname){
+		//echo 'asda';
+		if($_FILES){
+			//$tmpname=$_FILES['upload1']['tmp_name'];
+			$filename=date('dmygis');
+			if(!file_exists('/tmp/uploads')){
+				mkdir('/tmp/uploads',0777);
+				chmod('/tmp/uploads', 0777);
+			}
+			move_uploaded_file($tmpname, '/tmp/uploads/'.$filename);
+			return $this->base($filename);
+		}
+		return 0;
+	}
+
+	function base($filename){
+		$path="/tmp/uploads/".$filename;
+		$data = file_get_contents($path);
+		$file = base64_encode($data);
+		return $file;
+	}
+
 	function upload_photo(){
 		$user=$this->get_user($this->input->post('use_account'));
 		if(!is_array($user))exit('Data tidak tersedia!');
 		$filename=$this->input->post('filename');
-		$file=$_FILES['file']['tmp_name'];
+		//print_r($_FILES);
+		$file=$this->upload_photo_to_tmp($_FILES['file_data']['tmp_name']);
+		//$email=$user['username'];
+		$albumid=$user['album_id'];
+		$ref_token=$user['refresh_token'];
+		$client_id=$user['client_id'];
+		$client_secret=$user['client_secret'];
 
-		$albumid='105181859478368215246';
-		$puser=$user['username'];
-		$ppass=$user['password'];
-		
-		$sess=$this->picasa();
-		$this->upload_picasa($sess,$filename,$file,$puser,$ppass,$albumid);
+		$result=$this->upload($filename,$file,$albumid,$client_id,$client_secret,$ref_token);
+		return $result;
 	}
 	
-	function upload_picasa($session,$filename='',$file='',$puser='',$ppass='',$albumid=''){
-		//$file=$this->upload_photo($file); //matikan jika memanggil function 'tes'
-		// Instantiate the Choreo, using a previously instantiated Temboo_Session object, eg:
-		$postPhoto = new Google_Picasa_PostPhoto($session);
-		// Get an input object for the Choreo
-		$postPhotoInputs = $postPhoto->newInputs();
-		// Set inputs
-		try{
-		$postPhotoInputs->setImageName($filename)//$judul
-			->setClientSecret("rLrd6OE3guBTyx3NwhPenKuG")
-			->setRefreshToken("1/o3G_592X5sxpQ5SO8xvuyIJKxn6IO3S_tZC06HyXjOrBactUREZofsF9C7PrpE-j")
-			->setAlbumID($albumid)//$albumid
-			->setFileContents($file)
-			->setUserID('117107516089877359680')//dunia grup
-			->setClientID("437877361893-v5bgn5lennfolmmogrd0dqpv1nfp1qhs.apps.googleusercontent.com");
-		}catch(Exception $e){
-			$e->getMessage();
-		}
-
-		// Execute Choreo and get results
-		$postPhotoResults = $postPhoto->execute($postPhotoInputs)->getResults();
-		$output=$postPhotoResults->outputArray['Response'];
-
+	function upload($filename='',$file='',$albumid='',$client_id='',$client_secret='',$ref_token=''){
+		$output=$this->upload_picasa(
+				$filename,
+				$file,
+				$albumid,
+				$client_id,
+				$client_secret,
+				$ref_token
+			);
 		//print_r($res);
 		$f = new SimpleXMLElement($output);
 
 		$res=json_decode(str_replace('@','',json_encode($f->content)));
 		$res=str_replace('https','http',$res->attributes->src);
-		return $res;
+		$this->session->set_flashdata('result',$res);
+		redirect('v2/picasa_upload');
 	}
 	
-	function picasa(){
-		require(realpath('temboo')."/temboo.php");
-		$session = new Temboo_Session('rohmanwebid', 'myFirstApp', '24b088fea0a14d7eb53e3f13082724c5');
+	function upload_picasa($filename='',$file='',$albumid='',$client_id='',$client_secret='',$ref_token=''){
+		$file_lib=APPPATH.'libraries/temboo/Temboo_Session.php';
+		if(file_exists($file_lib)){
+			require_once($file_lib);
+		}
+			//require(realpath('temboo')."/temboo.php");
+		//$this->load->library('temboo/Temboo_Session');
+		$session = new Temboo_Session();
+		 
+		$postPhoto = new Google_Picasa_PostPhoto($session);
 
-		return $session;
+		// Get an input object for the Choreo
+		$postPhotoInputs = $postPhoto->newInputs();
+
+		// Set inputs
+		$postPhotoInputs->setClientSecret($client_secret)
+		->setImageName($filename)
+		->setRefreshToken($ref_token)
+		->setAlbumID($albumid)
+		->setFileContents($file)
+		->setClientID($client_id);
+
+		// Execute Choreo and get results
+		$postPhotoResults = $postPhoto->execute($postPhotoInputs)->getResults();		
+		$output=$postPhotoResults->outputArray['Response'];
+		
+		return $output;
+		
 	}
 
-
-	function form_ex(){
-		$this->load->helper('form');
-		echo form_open_multipart();
-		echo form_upload('file');
-		echo form_submit('submit','upload');
-		echo form_close();
-	}
 }

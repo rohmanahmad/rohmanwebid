@@ -26,7 +26,30 @@
 					  <button type="submit" class="btn btn-primary">Ambil Link</button>
 					  <a href="<?=site_url('v2/picasa_upload/galery')?>" class="btn btn-default">Lihat Galery</a>
 					<?=form_close()?>
+					<?php
+						echo ($this->session->flashdata('result'))?
+							'<br><textarea class="form-control js-copytextarea" style="max-width:100%;height:35px">'.$this->session->flashdata('result').'</textarea>'.
+							'<button class="btn btn-default glyphicon glyphicon-copy js-textareacopybtn"> Copy</button>'
+							:'';
+					?>
                 </div>
+					<script type="text/javascript">
+						
+							var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+							copyTextareaBtn.addEventListener('click', function(event) {
+							  var copyTextarea = document.querySelector('.js-copytextarea');
+							  copyTextarea.select();
+
+							  try {
+							    var successful = document.execCommand('copy');
+							    var msg = successful ? 'successful' : 'unsuccessful';
+							    console.log('Copying text command was ' + msg);
+							  } catch (err) {
+							    console.log('Oops, unable to copy');
+							  }
+							});
+					</script>
             </div>
 
         </div>
