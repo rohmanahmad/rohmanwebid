@@ -49,16 +49,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="<?=site_url()?>#about">Home</a>
+                        <a href="<?=site_url('v1')?>#about">Home</a>
                     </li>
                     <li>
-                        <a href="<?=site_url()?>#services">Services</a>
+                        <a href="<?=site_url('v1')?>#services">Services</a>
                     </li>
                     <li>
-                        <a href="<?=site_url()?>#contact">Kontak</a>
+                        <a href="<?=site_url('v1')?>#contact">Kontak</a>
                     </li>
                     <li>
-                        <a href="<?=site_url('blog')?>">Blog Artikel</a>
+                        <a href="blog">Blog Artikel</a>
                     </li>
                 </ul>
             </div>

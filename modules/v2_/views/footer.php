@@ -5,19 +5,19 @@
                 <div class="col-lg-12">
                     <ul class="list-inline">
                         <li>
-                            <a href="<?=site_url()?>">Home</a>
+                            <a href="#">Home</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="<?=site_url('#about')?>">Portofolio</a>
+                            <a href="#about">Portofolio</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="<?=site_url('#services')?>">Kontak</a>
+                            <a href="#services">Kontak</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="<?=site_url()?>blog">Blog Artikel</a>
+                            <a href="blog">Blog Artikel</a>
                         </li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; rohmanweID 2014. All Rights Reserved</p>
