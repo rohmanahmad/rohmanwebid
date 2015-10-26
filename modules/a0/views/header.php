@@ -27,6 +27,34 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <meta content='Index, Follow' name='robots'/>
+    <meta content='rohman web id' name='author'/>
+    <meta content='2 days' name='revisit'/>
+    <meta content='never' name='expires'/>
+    <meta content='2 days' name='revisit-after'/>
+    <meta content='Indonesia' name='geo.placename'/>
+    <meta content='ID' name='language'/>
+    <meta content='ID' name='geo.country'/>
+    <meta content='All-Language' http-equiv='Content-Language'/>
+    <meta content='global' name='distribution'/>
+    <meta content='blogger' name='generator'/>
+    <meta content='general' name='rating'/>
+    <meta content='global' name='target'/>
+    <meta content='true' name='MSSmartTagsPreventParsing'/>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+    <meta content='index, follow' name='googlebot'/>
+    <meta content='follow, all' name='Googlebot-Image'/>
+    <meta content='follow, all' name='msnbot'/>
+    <meta content='follow, all' name='Slurp'/>
+    <meta content='follow, all' name='ZyBorg'/>
+    <meta content='follow, all' name='Scooter'/>
+    <meta content='all' name='spiders'/>
+    <meta content='all' name='WEBCRAWLERS'/>
+    <meta content='noodp' name='robots'/>
+    <meta content='noydir' name='robots'/>
+    <link expr:href='data:blog.url' rel='canonical'/> 
+    <meta content='aeiwi, alexa, alltheWeb, altavista, aol netfind, anzwers, canada, directhit, euroseek, excite, overture, go, google, hotbot. infomak, kanoodle, lycos, mastersite, national directory, northern light, searchit, simplesearch, Websmostlinked, webtop, what-u-seek, aol, yahoo, webcrawler, infoseek, excite, magellan, looksmart, bing, cnet, googlebot' name='search engines'/>
+    <meta content='Blog Tempat orang berbagi dan mencari ilmu komputer serta pemrograman komputer' name='description'/>
 
 </head>
 

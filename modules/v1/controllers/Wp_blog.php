@@ -21,18 +21,58 @@ class Wp_blog extends MX_Controller {
 		$this->load->view('footer');		
 	}
 
+# BROWSE FUNCTIONS
+
 	function browse_post(){
 		$this->load->helper('form');
 		$this->load_model();
 		$this->load->library('xmlrpc');
 		
-		$d['title_head']='Browse Baru';
+		$d['title_head']='Browse Posts';
 		$this->load->view('header',$d);
 
 		$d['posts']=$this->m->get_posts();
 		$this->load->view('wp_blog/browse_posts',$d);
 		$this->load->view('footer');
 	}
+
+	function browse_page(){
+		$this->load_model();
+		$this->load->library('xmlrpc');
+		
+		$d['title_head']='Browse Pages';
+		$this->load->view('header',$d);
+
+		$d['page_list']=$this->m->get_pages();
+		$this->load->view('wp_blog/browse_pages',$d);
+		$this->load->view('footer');
+	}
+
+	function list_category(){
+		$this->load->library('xmlrpc');
+		$this->load->helper('form');
+		$this->load_model();
+		$d['title_head']='Post Baru';
+		$this->load->view('header',$d);
+
+		$this->load->view('wp_blog/category_list',$d);
+		
+		$this->load->view('footer');
+	}	
+
+	function browse_user(){
+		$this->load->library('xmlrpc');
+		$this->load->helper('form');
+		$this->load_model();
+		$d['title_head']='Browse User';
+		$this->load->view('header',$d);
+		$d['user']=$this->m->wp_user();
+		$this->load->view('wp_blog/browse_user',$d);
+		
+		$this->load->view('footer');		
+	}
+
+# NEW INSERT FUNCTIONS
 
 	function new_post(){
 		$this->load->helper('form');
@@ -64,28 +104,21 @@ class Wp_blog extends MX_Controller {
 		$this->load->view('footer');
 	}	
 
-	function list_category(){
-		$this->load->library('xmlrpc');
+# EDIT FUNCTIONS
+
+	function edit_page($page_id=''){
 		$this->load->helper('form');
 		$this->load_model();
-		$d['title_head']='Post Baru';
+		$this->load->library('xmlrpc');
+
+		$this->m->save_page_modified(); //if submit
+		$d['title_head']='Edit Page';
 		$this->load->view('header',$d);
 
-		$this->load->view('wp_blog/category_list',$d);
-		
+		$d['page_info']=$this->m->get_page_edit($page_id);
+		$d['page_status']=$this->m->page_get_status_list();
+		$this->load->view('wp_blog/edit_page',$d);
 		$this->load->view('footer');
-	}	
-
-	function browse_user(){
-		$this->load->library('xmlrpc');
-		$this->load->helper('form');
-		$this->load_model();
-		$d['title_head']='Browse User';
-		$this->load->view('header',$d);
-		$d['user']=$this->m->wp_user();
-		$this->load->view('wp_blog/browse_user',$d);
-		
-		$this->load->view('footer');		
 	}
 	
 

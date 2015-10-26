@@ -60,6 +60,22 @@ class Wp_blog_model extends CI_Model{
 	    }
 	}
 
+	function get_pages(){
+	    $method='wp.getPages';
+
+	    $request = array(0, $this->server_user, $this->server_pass);
+
+	    $result=$this->xmlRPC($method,$request,FALSE);
+	    
+	    if ( !$result ){
+	        echo 'Error:<br>'.$this->xmlrpc->display_error();
+	    }else{
+	        $xmldata=$this->xmlrpc->display_response();
+	        
+	        return $xmldata;
+	    }
+	}
+
 	function create_page(){
 		if(!$_POST)return;
 	    $thePost = 
@@ -70,7 +86,9 @@ class Wp_blog_model extends CI_Model{
 				"page_status" => array($this->input->post('status'), "string"), 
 				"post_author" => array(1, "int"), 
 				"mt_excerpt" => array("excerpt", "string"), 
+				"wp_slug" => array(str_replace(' ','-',strtolower($this->input->post('title'))), "string"), 
 				"mt_allow_comments" => array("close", "string"), 
+				//"enclosure"=>array('http://rohman.web.id/blog/hello-world','string')
 				),
 	        'struct',
 	      );               
@@ -183,6 +201,53 @@ class Wp_blog_model extends CI_Model{
 	        
 	        return $xmldata;
 	    }
+	}
+
+	function get_page_edit($page_id){
+		if(empty($page_id) or !is_numeric($page_id)) exit("Tidak Valid");
+		$this->session->set_userdata('page_id',$page_id);
+		$method='wp.getPage';
+
+	    $request = array(0, $page_id,$this->server_user, $this->server_pass);
+
+	    $result=$this->xmlRPC($method,$request,FALSE);
+	    
+	    if ( !$result ){
+	        echo 'Error:<br>'.$this->xmlrpc->display_error();
+	    }else{
+	        $xmldata=$this->xmlrpc->display_response();
+	        
+	        return $xmldata;
+	    }
+	}
+
+	function save_page_modified(){
+		if($_POST){
+			$page_id=$this->session->userdata('page_id');
+
+		    $method='wp.editPage';
+
+		    $thePost = 
+		    array(
+		    	array(
+					"title" => array($this->input->post('title'), "string"), 
+					"description" => array($this->input->post('content'), "string"),
+					"page_status" => array($this->input->post('status'), "string"), 
+					"post_author" => array(1, "int"), 
+					"mt_excerpt" => array("excerpt", "string"), 
+					"wp_slug" => array(str_replace(' ','-',strtolower($this->input->post('title'))), "string"), 
+					"mt_allow_comments" => array("close", "string"), 
+					//"enclosure"=>array('http://rohman.web.id/blog/hello-world','string')
+					),
+		        'struct',
+		      );               
+
+		    $request = array(1, $page_id, $this->server_user, $this->server_pass, $thePost);
+
+		    $result = $this->xmlRPC($method,$request,FALSE);
+		    $this->session->set_flashdata('page_report','Sukses Menyimpan Page "'.$this->input->post('title').'"');
+		    redirect(get_link(1,2).'/browse_page');
+		}
 	}
 
 
