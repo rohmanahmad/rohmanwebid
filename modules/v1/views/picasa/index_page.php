@@ -23,8 +23,9 @@
 					    <?=form_upload('file_data')?>
 					    <p class="help-block">Pilih File Gambar [ *.jpg,*.png,*.bmp ]</p>
 					  </div>
+					  <a href="<?=site_url(version(1).'/')?>" class="btn btn-default glyphicon glyphicon-home"></a>
 					  <button type="submit" class="btn btn-primary">Ambil Link</button>
-					  <a href="<?=site_url(version(1).'/picasa_upload/galery')?>" class="btn btn-default">Lihat Galery</a>
+					  <a href="<?=site_url(version(1).'/picasa_upload/galery')?>" class="btn btn-warning">Lihat Galery</a>
 					<?=form_close()?>
 					<?php
 						echo ($this->session->flashdata('result'))?

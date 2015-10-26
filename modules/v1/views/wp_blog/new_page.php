@@ -4,10 +4,10 @@
         <div class="container">
             <?=form_open()?>
                 <div class="row">
-                    <h1>Post-Draft Artikel</h1>
+                    <h1>Halaman Baru</h1>
                     <hr>
-                        <?php 
-                        $res=$this->session->flashdata('posting_report');
+                    <?php 
+                        $res=$this->session->flashdata('page_report');
                         echo ($res)?'<div class="alert alert-success" role="alert">'.$res.'</div>':''; 
                         ?>
                     <br/><br/>
@@ -23,13 +23,13 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Status</label>
                             <?php
-                                echo form_dropdown('status',(isset($post_status))?$post_status:array(''=>'Tidak Ada'),'','class="form-control"');
+                                echo form_dropdown('status',(isset($page_status))?$page_status:array(''=>'Tidak Ada'),'','class="form-control"');
                             ?>
                         </div>
                     </div>
                     <div class="col-sm-7">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Kontent Blog</label>
+                            <label for="exampleInputEmail1">Kontent Page</label>
                             <?=form_textarea('content','','class="form-control"')?>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                     <div class="col-md-9"></div>
                     <div class="col-md-3">
                         <a href="<?=site_url(get_link(1,2))?>" class="btn btn-default glyphicon glyphicon-home"></a>
-                        <a href="<?=site_url(get_link(1,2).'/browse_post')?>" class="btn btn-default glyphicon glyphicon-list"></a>
+                        <a href="<?=site_url(get_link(1,2).'/browse_page')?>" class="btn btn-default glyphicon glyphicon-list"></a>
                         <input type="submit" value="Simpan" class="btn btn-primary">
                     </div>
                 </div>

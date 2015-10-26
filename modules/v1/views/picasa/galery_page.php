@@ -30,7 +30,7 @@
 								$total = $counts->totalResults; 
 								   
 								foreach ($sxml->entry as $entry) {
-								  $title = $entry->title;
+								  $title = substr($entry->{'title'},0,10);
 								  $summary = $entry->summary;
 								  
 								  $gphoto = $entry->children('http://schemas.google.com/photos/2007');
@@ -42,8 +42,13 @@
 								  $thumbnail = $media->group->thumbnail[1];
 								  $tags = $media->group->keywords;
 								  echo '
-										  	<img role="presentation" onclick="set_value(\''.$thumbnail->attributes()->{'url'}.'\')" class="btn img-thumnail" style="margin:0%;" src="'.$thumbnail->attributes()->{'url'}.'" width="100px" />
-										  ';
+										 <div class="list-group" style="width:130px;float:left;margin:2px;">
+										  <a class="list-group-item" style="height:130px;">
+										  <img role="presentation" class="img-thumnail" style="margin:0%;" src="'.$thumbnail->attributes()->{'url'}.'" width="100px" />
+										  </a>
+										  <a href="#" class="list-group-item btn-primary" onclick="set_value(\''.$thumbnail->attributes()->{'url'}.'\')">'.$title.'</a>
+										 </div>	
+										';
 								}
 							?>
 						</div>
@@ -51,7 +56,8 @@
 					<hr>
 					<div class="row">
 						<div class="col-md-2">
-							<a href="<?=site_url(version(1).'/picasa_upload')?>" class="btn btn-primary">Upload Baru</a>
+							<a href="<?=site_url(version(1).'/')?>" class="btn btn-default glyphicon glyphicon-home"></a>
+							<a href="<?=site_url(version(1).'/picasa_upload')?>" class="btn btn-primary">Upload</a>
 						</div>
 						<div class="col-md-10">
 							<textarea class="form-control js-copytextarea"></textarea>
