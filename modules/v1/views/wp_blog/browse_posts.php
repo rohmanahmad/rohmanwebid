@@ -2,6 +2,11 @@
     <div class="content-section-a">
 
         <div class="container">
+            <?php 
+            //print_r($this->session->all_userdata());
+            $res=$this->session->flashdata('posting_report');
+            echo ($res)?'<div class="alert alert-success" role="alert">'.$res.'</div>':''; 
+            ?>
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
@@ -24,7 +29,8 @@
                                     <td>{$r['post_title']}</td>
                                     <td>{$r['post_status']}</td>
                                     <td>{$r['post_excerpt']}</td>
-                                    <td>".anchor(get_link(1,2).'/edit_post/'.$r['post_id'],'Lihat'/*,'class=\'btn btn-primary\' style=\'height:20px;padding-top:0px; \''*/)."</td>
+                                    <td>".anchor(($r['post_status'] == 'publish')?$r['link']:$this->uri->uri_string().'#','Lihat').nbs(2)
+                                         .anchor(get_link(1,2).'/edit_post/'.$r['post_id'],'Edit'/*,'class=\'btn btn-primary\' style=\'height:20px;padding-top:0px; \''*/)."</td>
                                 </tr>";
                             $no++;
                         }

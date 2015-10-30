@@ -48,14 +48,15 @@ class Wp_blog extends MX_Controller {
 		$this->load->view('footer');
 	}
 
-	function list_category(){
+	function browse_categories(){
 		$this->load->library('xmlrpc');
 		$this->load->helper('form');
 		$this->load_model();
-		$d['title_head']='Post Baru';
+		$d['title_head']='Browse Kategori';
 		$this->load->view('header',$d);
 
-		$this->load->view('wp_blog/category_list',$d);
+		$d['categories']=$this->m->get_categories();
+		$this->load->view('wp_blog/browse_categories',$d);
 		
 		$this->load->view('footer');
 	}	
@@ -104,6 +105,20 @@ class Wp_blog extends MX_Controller {
 		$this->load->view('footer');
 	}	
 
+	function new_category(){
+		$this->load->helper('form');
+		$this->load_model();
+		$this->load->library('xmlrpc');
+		
+		$d['title_head']='Kategori Baru';
+		$this->m->create_category(); //if POST submit
+		$this->load->view('header',$d);
+
+		$d['cat']=$this->m->list_category();
+		$this->load->view('wp_blog/new_category',$d);
+		$this->load->view('footer');
+	}
+
 # EDIT FUNCTIONS
 
 	function edit_page($page_id=''){
@@ -118,6 +133,21 @@ class Wp_blog extends MX_Controller {
 		$d['page_info']=$this->m->get_page_edit($page_id);
 		$d['page_status']=$this->m->page_get_status_list();
 		$this->load->view('wp_blog/edit_page',$d);
+		$this->load->view('footer');
+	}
+
+	function edit_post($post_id=''){
+		$this->load->helper('form');
+		$this->load_model();
+		$this->load->library('xmlrpc');
+
+		$this->m->save_post_modified(); //if submit
+		$d['title_head']='Edit Page';
+		$this->load->view('header',$d);
+
+		$d['post_info']=$this->m->get_post_edit($post_id);
+		$d['post_status']=$this->m->post_get_status_list();
+		$this->load->view('wp_blog/edit_post',$d);
 		$this->load->view('footer');
 	}
 	

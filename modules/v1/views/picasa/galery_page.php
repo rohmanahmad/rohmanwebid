@@ -11,7 +11,7 @@
                 <h1>Gallery Picasa Web</h1>
                 <hr><br/><br/>
                 <div class="col-xs-3 hidden-xs">
-                    <img style="margin-left:20%;" src="http://lh3.googleusercontent.com/-Oqsn6DMwzso/VimigmAgtxI/AAAAAAAAAFM/Tuj13p9kzs0/logo_picasa.png" width="100px" />
+                    <img style="margin-left:20%;" src="http://lh3.googleusercontent.com/-coy9AfY3clo/VjChTm5Z6xI/AAAAAAAAAGE/ee2pXqhoyak/s200-Ic42/picasa_logo.png" width="100px" />
                 </div>
                 <div class="col-sm-9">
 					<div class="row">
@@ -46,7 +46,7 @@
 										  <a class="list-group-item" style="height:130px;">
 										  <img role="presentation" class="img-thumnail" style="margin:0%;" src="'.$thumbnail->attributes()->{'url'}.'" width="100px" />
 										  </a>
-										  <a href="#" class="list-group-item btn-primary" onclick="set_value(\''.$thumbnail->attributes()->{'url'}.'\')">'.$title.'</a>
+										  <a class="list-group-item btn-primary" onclick="set_value(\''.$thumbnail->attributes()->{'url'}.'\')">'.$title.'</a>
 										 </div>	
 										';
 								}

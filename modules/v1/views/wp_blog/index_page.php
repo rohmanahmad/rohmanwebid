@@ -3,7 +3,7 @@
         font-size:5em;
         border:0px solid;
         padding:10px;
-        margin-left:10px;
+        margin-left:0px;
         margin-top:10px;
     }
     .mm{
@@ -53,8 +53,8 @@
                 </div>";
                 $category_menu="
                 <div class='list-group'>
-                  <a href='".site_url(get_link(1,2))."/list_category' class='list-group-item'>Create Category</a>
-                  <a href='".site_url(get_link(1,2))."/list_category' class='list-group-item'>Browse Category</a>
+                  <a href='".site_url(get_link(1,2))."/new_category' class='list-group-item'>Create Category</a>
+                  <a href='".site_url(get_link(1,2))."/browse_categories' class='list-group-item'>Browse Category</a>
                 </div>";
                 $komentar_menu="
                 <div class='list-group'>
@@ -70,13 +70,21 @@
                         );
                     foreach ($arr_link as $icon => $link) {
                         # code...
-                        echo 
+                        /*echo 
                         '<div class="mm img img-rounded" data-container="body" data-toggle="popover" data-placement="bottom" data-content="'.$link[1].'" onclick="show_popup()">
                             <a class="img-rounded" style="padding:10px;">
                                 <div class="m glyphicon '.$icon.' "></div>
                             </a>
                                 <span class="col-md-12" style="text-align:center;">'.$link[0].'</span>
-                        </div>';
+                        </div>';*/
+                        echo '
+                            <div class="list-group" style="width:130px;float:left;margin:2px;">
+                            <a class="list-group-item" style="height:130px;">
+                                <div class="m glyphicon '.$icon.' "></div>
+                            </a>
+                            <a class="list-group-item btn-primary"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="'.$link[1].'" onclick="show_popup()">'.$link[0].'</a>
+                            </div> 
+                        ';
                     }
                 ?>
 <script type="text/javascript">

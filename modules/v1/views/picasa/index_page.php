@@ -6,7 +6,7 @@
                 <h1>Upload To Picasa Web</h1>
                 <hr><br/><br/>
                 <div class="col-sm-3">
-                    <img style="margin-left:20%;" src="http://lh3.googleusercontent.com/-Oqsn6DMwzso/VimigmAgtxI/AAAAAAAAAFM/Tuj13p9kzs0/logo_picasa.png" width="100px" />
+                    <img style="margin-left:20%;" src="http://lh3.googleusercontent.com/-coy9AfY3clo/VjChTm5Z6xI/AAAAAAAAAGE/xKyDDz9y1Yk/s144/picasa_logo.png" width="100px" />
                 </div>
                 <div class="col-sm-9">
 					<?=form_open_multipart(version(1).'/picasa_upload/upload_photo')?>
