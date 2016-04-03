@@ -11,6 +11,7 @@
                                         //'LINK'=>array('label','image')
                                         version(1).'/picasa_upload'=>array('Manage Photos','http://lh3.googleusercontent.com/-PLqXaOo3T5s/VjCiTnVKCXI/AAAAAAAAAGQ/BjG0FC5k4rU/picasa_logo.jpg'),
                                         version(1).'/wp_blog'=>array('Manage Blogs','http://lh3.googleusercontent.com/-_EEhJiW3t7w/VimkjiWg4yI/AAAAAAAAAFY/mQ7hEhZVJpc/wordpress_logo.png'),
+                                        version(1).'/administration'=>array('Adminitration','http://lh3.googleusercontent.com/-1QcIHv9_qLo/VvulEVr4OoI/AAAAAAAAAJs/T7TOK6InItM/administrasi.png'),
                                         //'LINK'=>array('image','label'),
                                     );
                     foreach($arr_content as $link=>$content){
