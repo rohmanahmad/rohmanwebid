@@ -717,3 +717,179 @@ INFO - 2016-04-03 16:13:49 --> Controller Class Initialized
 DEBUG - 2016-04-03 16:13:49 --> A0 MX_Controller Initialized
 INFO - 2016-04-03 16:13:49 --> Final output sent to browser
 DEBUG - 2016-04-03 16:13:49 --> Total execution time: 0.0123
+INFO - 2016-04-03 17:11:31 --> Config Class Initialized
+INFO - 2016-04-03 17:11:31 --> Hooks Class Initialized
+DEBUG - 2016-04-03 17:11:31 --> UTF-8 Support Enabled
+INFO - 2016-04-03 17:11:31 --> Utf8 Class Initialized
+INFO - 2016-04-03 17:11:31 --> URI Class Initialized
+INFO - 2016-04-03 17:11:31 --> Router Class Initialized
+INFO - 2016-04-03 17:11:31 --> Output Class Initialized
+INFO - 2016-04-03 17:11:31 --> Security Class Initialized
+DEBUG - 2016-04-03 17:11:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-03 17:11:31 --> Input Class Initialized
+INFO - 2016-04-03 17:11:31 --> Language Class Initialized
+INFO - 2016-04-03 17:11:31 --> Language Class Initialized
+INFO - 2016-04-03 17:11:31 --> Config Class Initialized
+INFO - 2016-04-03 17:11:31 --> Loader Class Initialized
+INFO - 2016-04-03 17:11:31 --> Helper loaded: html_helper
+INFO - 2016-04-03 17:11:31 --> Helper loaded: url_helper
+INFO - 2016-04-03 17:11:31 --> Controller Class Initialized
+DEBUG - 2016-04-03 17:11:31 --> A0 MX_Controller Initialized
+INFO - 2016-04-03 17:11:31 --> Final output sent to browser
+DEBUG - 2016-04-03 17:11:31 --> Total execution time: 0.0168
+INFO - 2016-04-03 17:57:32 --> Config Class Initialized
+INFO - 2016-04-03 17:57:32 --> Hooks Class Initialized
+DEBUG - 2016-04-03 17:57:32 --> UTF-8 Support Enabled
+INFO - 2016-04-03 17:57:32 --> Utf8 Class Initialized
+INFO - 2016-04-03 17:57:32 --> URI Class Initialized
+DEBUG - 2016-04-03 17:57:32 --> No URI present. Default controller set.
+INFO - 2016-04-03 17:57:32 --> Router Class Initialized
+INFO - 2016-04-03 17:57:32 --> Output Class Initialized
+INFO - 2016-04-03 17:57:32 --> Security Class Initialized
+DEBUG - 2016-04-03 17:57:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-03 17:57:32 --> Input Class Initialized
+INFO - 2016-04-03 17:57:32 --> Language Class Initialized
+INFO - 2016-04-03 17:57:32 --> Language Class Initialized
+INFO - 2016-04-03 17:57:32 --> Config Class Initialized
+INFO - 2016-04-03 17:57:32 --> Loader Class Initialized
+INFO - 2016-04-03 17:57:32 --> Helper loaded: html_helper
+INFO - 2016-04-03 17:57:32 --> Helper loaded: url_helper
+INFO - 2016-04-03 17:57:32 --> Controller Class Initialized
+DEBUG - 2016-04-03 17:57:32 --> A0 MX_Controller Initialized
+DEBUG - 2016-04-03 17:57:32 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/header.php
+DEBUG - 2016-04-03 17:57:32 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/index-page.php
+DEBUG - 2016-04-03 17:57:32 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/footer.php
+INFO - 2016-04-03 17:57:32 --> Final output sent to browser
+DEBUG - 2016-04-03 17:57:32 --> Total execution time: 0.0460
+INFO - 2016-04-03 18:15:38 --> Config Class Initialized
+INFO - 2016-04-03 18:15:38 --> Hooks Class Initialized
+DEBUG - 2016-04-03 18:15:38 --> UTF-8 Support Enabled
+INFO - 2016-04-03 18:15:38 --> Utf8 Class Initialized
+INFO - 2016-04-03 18:15:38 --> URI Class Initialized
+INFO - 2016-04-03 18:15:38 --> Router Class Initialized
+INFO - 2016-04-03 18:15:38 --> Output Class Initialized
+INFO - 2016-04-03 18:15:38 --> Security Class Initialized
+DEBUG - 2016-04-03 18:15:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-03 18:15:38 --> Input Class Initialized
+INFO - 2016-04-03 18:15:38 --> Language Class Initialized
+INFO - 2016-04-03 18:15:38 --> Language Class Initialized
+INFO - 2016-04-03 18:15:38 --> Config Class Initialized
+INFO - 2016-04-03 18:15:38 --> Loader Class Initialized
+INFO - 2016-04-03 18:15:38 --> Helper loaded: html_helper
+INFO - 2016-04-03 18:15:38 --> Helper loaded: url_helper
+INFO - 2016-04-03 18:15:38 --> Controller Class Initialized
+DEBUG - 2016-04-03 18:15:38 --> A0 MX_Controller Initialized
+INFO - 2016-04-03 18:15:38 --> Final output sent to browser
+DEBUG - 2016-04-03 18:15:38 --> Total execution time: 0.0173
+INFO - 2016-04-03 19:23:54 --> Config Class Initialized
+INFO - 2016-04-03 19:23:54 --> Hooks Class Initialized
+DEBUG - 2016-04-03 19:23:54 --> UTF-8 Support Enabled
+INFO - 2016-04-03 19:23:54 --> Utf8 Class Initialized
+INFO - 2016-04-03 19:23:54 --> URI Class Initialized
+DEBUG - 2016-04-03 19:23:54 --> No URI present. Default controller set.
+INFO - 2016-04-03 19:23:54 --> Router Class Initialized
+INFO - 2016-04-03 19:23:54 --> Output Class Initialized
+INFO - 2016-04-03 19:23:54 --> Security Class Initialized
+DEBUG - 2016-04-03 19:23:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-03 19:23:54 --> Input Class Initialized
+INFO - 2016-04-03 19:23:54 --> Language Class Initialized
+INFO - 2016-04-03 19:23:54 --> Language Class Initialized
+INFO - 2016-04-03 19:23:54 --> Config Class Initialized
+INFO - 2016-04-03 19:23:54 --> Loader Class Initialized
+INFO - 2016-04-03 19:23:54 --> Helper loaded: html_helper
+INFO - 2016-04-03 19:23:54 --> Helper loaded: url_helper
+INFO - 2016-04-03 19:23:54 --> Controller Class Initialized
+DEBUG - 2016-04-03 19:23:54 --> A0 MX_Controller Initialized
+DEBUG - 2016-04-03 19:23:54 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/header.php
+DEBUG - 2016-04-03 19:23:54 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/index-page.php
+DEBUG - 2016-04-03 19:23:54 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/footer.php
+INFO - 2016-04-03 19:23:54 --> Final output sent to browser
+DEBUG - 2016-04-03 19:23:54 --> Total execution time: 0.0162
+INFO - 2016-04-03 19:26:34 --> Config Class Initialized
+INFO - 2016-04-03 19:26:34 --> Hooks Class Initialized
+DEBUG - 2016-04-03 19:26:34 --> UTF-8 Support Enabled
+INFO - 2016-04-03 19:26:34 --> Utf8 Class Initialized
+INFO - 2016-04-03 19:26:34 --> URI Class Initialized
+INFO - 2016-04-03 19:26:34 --> Router Class Initialized
+INFO - 2016-04-03 19:26:34 --> Output Class Initialized
+INFO - 2016-04-03 19:26:34 --> Security Class Initialized
+DEBUG - 2016-04-03 19:26:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-03 19:26:34 --> Input Class Initialized
+INFO - 2016-04-03 19:26:34 --> Language Class Initialized
+INFO - 2016-04-03 19:26:34 --> Language Class Initialized
+INFO - 2016-04-03 19:26:34 --> Config Class Initialized
+INFO - 2016-04-03 19:26:34 --> Loader Class Initialized
+INFO - 2016-04-03 19:26:34 --> Helper loaded: html_helper
+INFO - 2016-04-03 19:26:34 --> Helper loaded: url_helper
+INFO - 2016-04-03 19:26:34 --> Controller Class Initialized
+DEBUG - 2016-04-03 19:26:34 --> A0 MX_Controller Initialized
+INFO - 2016-04-03 19:26:34 --> Final output sent to browser
+DEBUG - 2016-04-03 19:26:34 --> Total execution time: 0.0153
+INFO - 2016-04-03 19:44:58 --> Config Class Initialized
+INFO - 2016-04-03 19:44:58 --> Hooks Class Initialized
+DEBUG - 2016-04-03 19:44:58 --> UTF-8 Support Enabled
+INFO - 2016-04-03 19:44:58 --> Utf8 Class Initialized
+INFO - 2016-04-03 19:44:58 --> URI Class Initialized
+INFO - 2016-04-03 19:44:58 --> Router Class Initialized
+INFO - 2016-04-03 19:44:58 --> Output Class Initialized
+INFO - 2016-04-03 19:44:58 --> Security Class Initialized
+DEBUG - 2016-04-03 19:44:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-03 19:44:58 --> Input Class Initialized
+INFO - 2016-04-03 19:44:58 --> Language Class Initialized
+INFO - 2016-04-03 19:44:58 --> Language Class Initialized
+INFO - 2016-04-03 19:44:58 --> Config Class Initialized
+INFO - 2016-04-03 19:44:58 --> Loader Class Initialized
+INFO - 2016-04-03 19:44:58 --> Helper loaded: html_helper
+INFO - 2016-04-03 19:44:58 --> Helper loaded: url_helper
+INFO - 2016-04-03 19:44:58 --> Controller Class Initialized
+DEBUG - 2016-04-03 19:44:58 --> A0 MX_Controller Initialized
+INFO - 2016-04-03 19:44:58 --> Final output sent to browser
+DEBUG - 2016-04-03 19:44:58 --> Total execution time: 0.0117
+INFO - 2016-04-03 21:35:13 --> Config Class Initialized
+INFO - 2016-04-03 21:35:13 --> Hooks Class Initialized
+DEBUG - 2016-04-03 21:35:13 --> UTF-8 Support Enabled
+INFO - 2016-04-03 21:35:13 --> Utf8 Class Initialized
+INFO - 2016-04-03 21:35:13 --> URI Class Initialized
+DEBUG - 2016-04-03 21:35:13 --> No URI present. Default controller set.
+INFO - 2016-04-03 21:35:13 --> Router Class Initialized
+INFO - 2016-04-03 21:35:13 --> Output Class Initialized
+INFO - 2016-04-03 21:35:13 --> Security Class Initialized
+DEBUG - 2016-04-03 21:35:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-03 21:35:13 --> Input Class Initialized
+INFO - 2016-04-03 21:35:13 --> Language Class Initialized
+INFO - 2016-04-03 21:35:13 --> Language Class Initialized
+INFO - 2016-04-03 21:35:13 --> Config Class Initialized
+INFO - 2016-04-03 21:35:13 --> Loader Class Initialized
+INFO - 2016-04-03 21:35:13 --> Helper loaded: html_helper
+INFO - 2016-04-03 21:35:13 --> Helper loaded: url_helper
+INFO - 2016-04-03 21:35:13 --> Controller Class Initialized
+DEBUG - 2016-04-03 21:35:13 --> A0 MX_Controller Initialized
+DEBUG - 2016-04-03 21:35:13 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/header.php
+DEBUG - 2016-04-03 21:35:13 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/index-page.php
+DEBUG - 2016-04-03 21:35:13 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/footer.php
+INFO - 2016-04-03 21:35:13 --> Final output sent to browser
+DEBUG - 2016-04-03 21:35:13 --> Total execution time: 0.0162
+INFO - 2016-04-03 22:09:53 --> Config Class Initialized
+INFO - 2016-04-03 22:09:53 --> Hooks Class Initialized
+DEBUG - 2016-04-03 22:09:53 --> UTF-8 Support Enabled
+INFO - 2016-04-03 22:09:53 --> Utf8 Class Initialized
+INFO - 2016-04-03 22:09:53 --> URI Class Initialized
+DEBUG - 2016-04-03 22:09:53 --> No URI present. Default controller set.
+INFO - 2016-04-03 22:09:53 --> Router Class Initialized
+INFO - 2016-04-03 22:09:53 --> Output Class Initialized
+INFO - 2016-04-03 22:09:53 --> Security Class Initialized
+DEBUG - 2016-04-03 22:09:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-04-03 22:09:53 --> Input Class Initialized
+INFO - 2016-04-03 22:09:53 --> Language Class Initialized
+INFO - 2016-04-03 22:09:53 --> Language Class Initialized
+INFO - 2016-04-03 22:09:53 --> Config Class Initialized
+INFO - 2016-04-03 22:09:53 --> Loader Class Initialized
+INFO - 2016-04-03 22:09:53 --> Helper loaded: html_helper
+INFO - 2016-04-03 22:09:53 --> Helper loaded: url_helper
+INFO - 2016-04-03 22:09:53 --> Controller Class Initialized
+DEBUG - 2016-04-03 22:09:53 --> A0 MX_Controller Initialized
+DEBUG - 2016-04-03 22:09:53 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/header.php
+DEBUG - 2016-04-03 22:09:53 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/index-page.php
+DEBUG - 2016-04-03 22:09:53 --> File loaded: /home/rohmanahmad/public_html/application/modules/a0/views/footer.php
+INFO - 2016-04-03 22:09:53 --> Final output sent to browser
+DEBUG - 2016-04-03 22:09:53 --> Total execution time: 0.0158
